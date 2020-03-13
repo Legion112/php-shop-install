@@ -1,0 +1,1 @@
+<div class='text-center top-col-banners'>@banerContent@</div>

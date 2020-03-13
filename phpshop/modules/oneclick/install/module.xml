@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<module>
+    <version>1.5</version>
+    <name>One Click</name>
+    <faqlink>http://faq.phpshop.ru/page/one-click.html</faqlink>
+    <description>Модуль заказа в один клик.</description>
+    <category>users</category>
+    <adminmenu>
+        <title>Заказ в один клик</title>
+        <capability>true</capability>
+        <podmenu>
+            <podmenu_name>Обзор заявок</podmenu_name>
+            <podmenu_action>dir.oneclick</podmenu_action>
+        </podmenu>
+        <notification>true</notification>
+    </adminmenu>
+</module>
