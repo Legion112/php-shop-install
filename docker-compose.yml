@@ -9,3 +9,12 @@ services:
     - ./public:/var/www/html/
     ports:
     - 8080:80
+    networks:
+      vrcube:
+        aliases:
+          - phpshop
+
+
+networks:
+  vrcube:
+    external: true
