@@ -21,4 +21,4 @@ SET
     `title_sub` = 'Заказ находится на ручной проверке';
 
 INSERT INTO `phpshop_payment_systems` (`id`, `name`, `path`, `enabled`, `num`, `message`, `message_header`, `yur_data_flag`, `icon`) VALUES
-(10018, 'Visa, Mastercard (Vrcube)', 'modules', '0', 0, '<p>Ваш заказ оплачен!</p>', 'Спасибо', '', '/UserFiles/Image/Payments/visa.png');
+(10320, 'Visa, Mastercard (Vrcube)', 'modules', '0', 0, '<p>Ваш заказ оплачен!</p>', 'Спасибо', '', '/UserFiles/Image/Payments/visa.png');

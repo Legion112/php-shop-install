@@ -1,5 +1,5 @@
 <?php
-
+require_once '../VrcubeConstant.php';
 /**
  * @param PHPShopCore $obj
  * @param $value
@@ -7,7 +7,7 @@
  */
 function send_to_order_mod_vrcube_hook($obj, $value, $rout)
 {
-    if ($rout === 'MIDDLE' && (int)$value['order_metod'] === 10018) {
+    if ($rout === 'MIDDLE' && (int)$value['order_metod'] === VrcubeConstant::$PAYMENT_ID) {
 
         // Настройки модуля
         include_once __DIR__ . '/mod_option.hook.php';
