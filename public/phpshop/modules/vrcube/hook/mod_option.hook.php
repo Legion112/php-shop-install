@@ -14,7 +14,7 @@ class PHPShopVrcubeArray extends PHPShopArray
             'title',
             'title_sub',
             'product_id',
-            'merchant_id',
+            'contract_id',
             'merchant_skey',
             'endpoint_url',
             'use_cashbox'

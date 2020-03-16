@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `phpshop_modules_vrcube_system` (
   `title` text NOT NULL,
   `title_sub` text NOT NULL,
   `product_id` varchar(255) NOT NULL default '',
-  `merchant_id` varchar(255) NOT NULL default '',
+  `contract_id` varchar(255) NOT NULL default '',
   `merchant_skey` varchar(255) NOT NULL default '',
   `endpoint_url` varchar(255) NOT NULL default '',
   `use_cashbox` TINYINT NOT NULL DEFAULT 0,

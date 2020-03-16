@@ -79,7 +79,7 @@ class VrcubePayment extends PHPShopPaymentResult {
         $this->crc = $_REQUEST['sign'];
         /** @noinspection PhpIllegalStringOffsetInspection */
         $this->my_crc = md5(
-            (int) $this->option['merchant_id']
+            (int) $this->option['contract_id']
             . $_REQUEST['payment_id']
             . $_REQUEST['status']
             . $_REQUEST['cf']

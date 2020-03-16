@@ -40,7 +40,7 @@ function actionStart()
     );
     $Tab1 .= $PHPShopGUI->setField(
         'ID Торговца',
-        $PHPShopGUI->setInputText(false, 'merchant_id_new', $data['merchant_id'], 250)
+        $PHPShopGUI->setInputText(false, 'contract_id_new', $data['contract_id'], 250)
     );
     $Tab1 .= $PHPShopGUI->setField(
         'Секретный ключ',

@@ -31,7 +31,7 @@ function userorderpaymentlink_mod_vrcube_hook($obj, $PHPShopOrderFunction) {
         $formParams = array(
             'product_id' => (int)$options['product_id'],
             'token' => md5(
-                (int)$options['merchant_id']
+                (int)$options['contract_id']
                 . (int)$options['product_id']
                 . $amount
                 . $cf
