@@ -39,7 +39,7 @@ function actionStart()
         $PHPShopGUI->setInputText(false, 'product_id_new', $data['product_id'], 250)
     );
     $Tab1 .= $PHPShopGUI->setField(
-        'ID Торговца',
+        'ID Договора',
         $PHPShopGUI->setInputText(false, 'contract_id_new', $data['contract_id'], 250)
     );
     $Tab1 .= $PHPShopGUI->setField(
@@ -83,7 +83,7 @@ function actionStart()
 <h4>Настройка модуля</h4>
 <ol>
     <li>Зарегистрироваться в <a href="http://vrcube.com/" target="_blank">Vrcube</a></li>
-    <li>Полученные в результате регистрации id продукта, id торговца и секретный ключ внести в настройки данного модуля</li>
+    <li>Полученные в результате регистрации id продукта, id договора и секретный ключ внести в настройки данного модуля</li>
     <li>Указать URL платежной формы - https://secure.acqp.co (тестовый шлюз) или https://secure.vrcube.com</li>
     <li>В случае успешной оплаты, пользователь будет перенаправлен на <code>http://'.$_SERVER['SERVER_NAME'].'/success/</code></li>
     <li>Если оплата по каким-то причинам не прошла, пользователь будет перенаправлен на <code>http://'.$_SERVER['SERVER_NAME'].'/fail/</code></li>
