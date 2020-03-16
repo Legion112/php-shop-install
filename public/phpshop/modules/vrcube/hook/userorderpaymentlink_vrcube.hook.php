@@ -37,7 +37,7 @@ function userorderpaymentlink_mod_vrcube_hook($obj, $PHPShopOrderFunction) {
                 . $cf
                 . $cf2
                 . $cf3
-                . trim($options['merchant_skey'])
+                . trim($options['vrcube_secret_word'])
             ),
             'amount' => $amount,
             'cf' => $cf,

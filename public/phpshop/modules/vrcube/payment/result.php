@@ -85,7 +85,7 @@ class VrcubePayment extends PHPShopPaymentResult {
             . $_REQUEST['cf']
             . $_REQUEST['cf2']
             . $_REQUEST['cf3']
-            . trim($this->option['merchant_skey'])
+            . trim($this->option['vrcube_secret_word'])
         );
         $this->inv_id = str_replace('-', '', $_REQUEST['cf']);
         $this->inv_id = trim($this->inv_id);

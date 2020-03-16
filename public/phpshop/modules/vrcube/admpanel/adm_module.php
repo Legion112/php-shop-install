@@ -44,7 +44,7 @@ function actionStart()
     );
     $Tab1 .= $PHPShopGUI->setField(
         'Секретный ключ',
-        $PHPShopGUI->setInputText(false, 'merchant_skey_new', $data['merchant_skey'], 250)
+        $PHPShopGUI->setInputText(false, 'vrcube_secret_word_new', $data['vrcube_secret_word'], 250)
     );
     $Tab1 .= $PHPShopGUI->setField(
         'URL платежной формы',
