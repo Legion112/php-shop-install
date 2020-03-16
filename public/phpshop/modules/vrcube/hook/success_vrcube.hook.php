@@ -5,7 +5,7 @@
  * @param $value
  * @return bool
  */
-function success_mod_acquiropay_hook($obj)
+function success_mod_vrcube_hook($obj)
 {
     if (!empty($_REQUEST['cf'])) {
         $obj->order_metod = 'modules" and id="10018';
@@ -15,4 +15,4 @@ function success_mod_acquiropay_hook($obj)
     return null;
 }
 
-$addHandler = array('index' => 'success_mod_acquiropay_hook');
+$addHandler = array('index' => 'success_mod_vrcube_hook');

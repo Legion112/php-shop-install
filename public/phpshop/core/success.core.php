@@ -1,16 +1,17 @@
-<?php
+<?php /** @noinspection ALL */
 
 /**
  * Обработчик успешной оплаты
  * @author PHPShop Software
  * @version 1.2
  * @package PHPShopCore
+ * @property string $order_metod
  */
 class PHPShopSuccess extends PHPShopCore {
 
     /**
      * Отладка
-     * @var bool 
+     * @var bool
      */
     var $debug = false;
 
@@ -103,7 +104,7 @@ class PHPShopSuccess extends PHPShopCore {
      */
     function ofd() {
         global $_classPath,$PHPShopModules,$PHPShopSystem;
-        
+
         // Проверка модулей с OFD
         $ofd = $PHPShopSystem->getParam('ofd');
         if (empty($ofd))
@@ -166,7 +167,7 @@ class PHPShopSuccess extends PHPShopCore {
 
     /**
      * Активированные платежные системы
-     * @return array 
+     * @return array
      */
     function get_payment() {
         $payment_arrray = array();

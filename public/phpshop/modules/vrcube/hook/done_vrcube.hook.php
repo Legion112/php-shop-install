@@ -5,13 +5,13 @@
  * @param $value
  * @param $rout
  */
-function send_to_order_mod_acquiropay_hook($obj, $value, $rout)
+function send_to_order_mod_vrcube_hook($obj, $value, $rout)
 {
     if ($rout === 'MIDDLE' && (int)$value['order_metod'] === 10018) {
 
         // Настройки модуля
         include_once __DIR__ . '/mod_option.hook.php';
-        $options = new PHPShopAcquiroPayArray();
+        $options = new PHPShopVrcubeArray();
         $options = $options->getArray();
 
         // Контроль оплаты от статуса заказа
@@ -46,7 +46,7 @@ function send_to_order_mod_acquiropay_hook($obj, $value, $rout)
 
                 'ok_url' => $domainUrl . '/success/',
                 'ko_url' => $domainUrl . '/fail/',
-                'cb_url' => $domainUrl . '/phpshop/modules/acquiropay/payment/result.php',
+                'cb_url' => $domainUrl . '/phpshop/modules/vrcube/payment/result.php',
             );
 
             // Email Плательщика
@@ -98,7 +98,7 @@ function send_to_order_mod_acquiropay_hook($obj, $value, $rout)
             $obj->set('payment_forma_title', 'Оплатить заказ № ' . $orderId);
             $obj->set('payment_info', $options['title']);
             $forma = ParseTemplateReturn(
-                $GLOBALS['SysValue']['templates']['acquiropay']['acquiropay_payment_forma'],
+                $GLOBALS['SysValue']['templates']['vrcube']['vrcube_payment_forma'],
                 true
             );
         } else {
@@ -111,5 +111,5 @@ function send_to_order_mod_acquiropay_hook($obj, $value, $rout)
 }
 
 $addHandler = array(
-    'send_to_order' => 'send_to_order_mod_acquiropay_hook'
+    'send_to_order' => 'send_to_order_mod_vrcube_hook'
 );

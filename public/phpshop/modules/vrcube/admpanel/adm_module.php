@@ -3,7 +3,7 @@
 PHPShopObj::loadClass('order');
 
 // SQL
-$PHPShopOrm = new PHPShopOrm($PHPShopModules->getParam("base.acquiropay.acquiropay_system"));
+$PHPShopOrm = new PHPShopOrm($PHPShopModules->getParam("base.vrcube.vrcube_system"));
 
 // Обновление версии модуля
 function actionBaseUpdate()
@@ -23,7 +23,7 @@ function actionUpdate()
 
     $PHPShopOrm->debug = false;
     $action = $PHPShopOrm->update($_POST);
-    header('Location: ?path=modules&id=acquiropay');
+    header('Location: ?path=modules&id=vrcube');
     return $action;
 }
 
@@ -52,7 +52,7 @@ function actionStart()
     );
     $Tab1 .= '<input type="hidden" name="use_cashbox_new" value="0" />';
     $Tab1 .= $PHPShopGUI->setField(
-        'Онлайн касса через AcquiroPay',
+        'Онлайн касса через Vrcube',
         $PHPShopGUI->setCheckbox(
             'use_cashbox_new',
             1,
@@ -82,12 +82,12 @@ function actionStart()
     $info = '
 <h4>Настройка модуля</h4>
 <ol>
-    <li>Зарегистрироваться в <a href="http://acquiropay.com/" target="_blank">AcquiroPay</a></li>
+    <li>Зарегистрироваться в <a href="http://vrcube.com/" target="_blank">Vrcube</a></li>
     <li>Полученные в результате регистрации id продукта, id торговца и секретный ключ внести в настройки данного модуля</li>
-    <li>Указать URL платежной формы - https://secure.acqp.co (тестовый шлюз) или https://secure.acquiropay.com</li>
+    <li>Указать URL платежной формы - https://secure.acqp.co (тестовый шлюз) или https://secure.vrcube.com</li>
     <li>В случае успешной оплаты, пользователь будет перенаправлен на <code>http://'.$_SERVER['SERVER_NAME'].'/success/</code></li>
     <li>Если оплата по каким-то причинам не прошла, пользователь будет перенаправлен на <code>http://'.$_SERVER['SERVER_NAME'].'/fail/</code></li>
-    <li>Оповещения о платежах от AcquiroPay будут приходить на <code>http://'.$_SERVER['SERVER_NAME'].'/phpshop/modules/acquiropay/payment/result.php</code></li>
+    <li>Оповещения о платежах от Vrcube будут приходить на <code>http://'.$_SERVER['SERVER_NAME'].'/phpshop/modules/vrcube/payment/result.php</code></li>
 </ol>
 <p>Дополнительные параметры по Федеральному закону 54 передаются по умолчанию с установкой нашего модуля.</p>
 ';

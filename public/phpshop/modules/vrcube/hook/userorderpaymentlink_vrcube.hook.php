@@ -5,11 +5,11 @@
  * @param PHPShopOrderFunction $PHPShopOrderFunction
  * @return string
  */
-function userorderpaymentlink_mod_acquiropay_hook($obj, $PHPShopOrderFunction) {
+function userorderpaymentlink_mod_vrcube_hook($obj, $PHPShopOrderFunction) {
 
     // Настройки модуля
     include_once(__DIR__ . '/mod_option.hook.php');
-    $options = new PHPShopAcquiroPayArray();
+    $options = new PHPShopVrcubeArray();
     $options = $options->getArray();
 
 
@@ -46,7 +46,7 @@ function userorderpaymentlink_mod_acquiropay_hook($obj, $PHPShopOrderFunction) {
 
             'ok_url' => $domainUrl . '/success/',
             'ko_url' => $domainUrl . '/fail/',
-            'cb_url' => $domainUrl . '/phpshop/modules/acquiropay/payment/result.php',
+            'cb_url' => $domainUrl . '/phpshop/modules/vrcube/payment/result.php',
         );
 
         // Email Плательщика
@@ -93,5 +93,5 @@ function userorderpaymentlink_mod_acquiropay_hook($obj, $PHPShopOrderFunction) {
     return $return;
 }
 
-$addHandler = array('userorderpaymentlink' => 'userorderpaymentlink_mod_acquiropay_hook');
+$addHandler = array('userorderpaymentlink' => 'userorderpaymentlink_mod_vrcube_hook');
 ?>

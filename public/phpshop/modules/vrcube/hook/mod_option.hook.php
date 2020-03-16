@@ -3,12 +3,12 @@
 // Настройки модуля
 PHPShopObj::loadClass("array");
 
-class PHPShopAcquiroPayArray extends PHPShopArray
+class PHPShopVrcubeArray extends PHPShopArray
 {
     public function __construct()
     {
         $this->objType = 3;
-        $this->objBase = $GLOBALS['SysValue']['base']['acquiropay']['acquiropay_system'];
+        $this->objBase = $GLOBALS['SysValue']['base']['vrcube']['vrcube_system'];
         parent::__construct(
             'status',
             'title',

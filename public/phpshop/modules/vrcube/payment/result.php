@@ -1,7 +1,7 @@
 <?php /** @noinspection AutoloadingIssuesInspection */
 
 /**
- * Обработчик оповещения о платеже AcquiroPay
+ * Обработчик оповещения о платеже Vrcube
  */
 session_start();
 
@@ -18,10 +18,10 @@ PHPShopObj::loadClass('system');
 $PHPShopBase = new PHPShopBase($_classPath . 'inc/config.ini', true, true);
 
 $PHPShopModules = new PHPShopModules($_classPath . 'modules/');
-$PHPShopModules->checkInstall('acquiropay');
+$PHPShopModules->checkInstall('vrcube');
 
 /**
- * Class AcquiroPayPayment
+ * Class VrcubePayment
  * @property string $option
  * @property string $payment_name
  * @property string $inv_id
@@ -29,7 +29,7 @@ $PHPShopModules->checkInstall('acquiropay');
  * @property string $my_crc
  * @property float $out_summ
  */
-class AcquiroPayPayment extends PHPShopPaymentResult {
+class VrcubePayment extends PHPShopPaymentResult {
 
     public function __construct() {
 
@@ -43,9 +43,9 @@ class AcquiroPayPayment extends PHPShopPaymentResult {
      * Настройка модуля
      */
     public function option() {
-        $this->payment_name = 'AcquiroPay';
+        $this->payment_name = 'Vrcube';
         include_once('../hook/mod_option.hook.php');
-        $options = new PHPShopAcquiroPayArray();
+        $options = new PHPShopVrcubeArray();
         $this->option = $options->getArray();
     }
 
@@ -112,5 +112,5 @@ class AcquiroPayPayment extends PHPShopPaymentResult {
     }
 }
 
-new AcquiroPayPayment();
+new VrcubePayment();
 

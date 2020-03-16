@@ -1,6 +1,6 @@
 
-DROP TABLE IF EXISTS `phpshop_modules_acquiropay_system`;
-CREATE TABLE IF NOT EXISTS `phpshop_modules_acquiropay_system` (
+DROP TABLE IF EXISTS `phpshop_modules_vrcube_system`;
+CREATE TABLE IF NOT EXISTS `phpshop_modules_vrcube_system` (
   `id` int(11) NOT NULL auto_increment,
   `status` int(11) NOT NULL,
   `title` text NOT NULL,
@@ -14,11 +14,11 @@ CREATE TABLE IF NOT EXISTS `phpshop_modules_acquiropay_system` (
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=cp1251;
 
-INSERT INTO `phpshop_modules_acquiropay_system`
+INSERT INTO `phpshop_modules_vrcube_system`
 SET
     `status` = 0,
     `title` = 'Пожалуйста, оплатите свой заказ',
     `title_sub` = 'Заказ находится на ручной проверке';
 
 INSERT INTO `phpshop_payment_systems` (`id`, `name`, `path`, `enabled`, `num`, `message`, `message_header`, `yur_data_flag`, `icon`) VALUES
-(10018, 'Visa, Mastercard (AcquiroPay)', 'modules', '0', 0, '<p>Ваш заказ оплачен!</p>', 'Спасибо', '', '/UserFiles/Image/Payments/visa.png');
+(10018, 'Visa, Mastercard (Vrcube)', 'modules', '0', 0, '<p>Ваш заказ оплачен!</p>', 'Спасибо', '', '/UserFiles/Image/Payments/visa.png');
