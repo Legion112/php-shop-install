@@ -1,5 +1,5 @@
 <?php
-
+require_once '../VrcubeConstant.php';
 PHPShopObj::loadClass('order');
 
 // SQL
@@ -36,19 +36,19 @@ function actionStart()
 
     $Tab1 = $PHPShopGUI->setField(
         'ID Продукта',
-        $PHPShopGUI->setInputText(false, 'product_id_new', $data['product_id'], 250)
+        $PHPShopGUI->setInputText(false, 'product_id_new', $data['product_id'], VrcubeConstant::$DEFAULT_INPUT_SIZE)
     );
     $Tab1 .= $PHPShopGUI->setField(
         'ID Договора',
-        $PHPShopGUI->setInputText(false, 'contract_id_new', $data['contract_id'], 250)
+        $PHPShopGUI->setInputText(false, 'contract_id_new', $data['contract_id'], VrcubeConstant::$DEFAULT_INPUT_SIZE)
     );
     $Tab1 .= $PHPShopGUI->setField(
         'Секретный ключ',
-        $PHPShopGUI->setInputText(false, 'vrcube_secret_word_new', $data['vrcube_secret_word'], 250)
+        $PHPShopGUI->setInputText(false, 'vrcube_secret_word_new', $data['vrcube_secret_word'], VrcubeConstant::$DEFAULT_INPUT_SIZE)
     );
     $Tab1 .= $PHPShopGUI->setField(
         'URL платежной формы',
-        $PHPShopGUI->setInputText(false, 'endpoint_url_new', $data['endpoint_url'], 250)
+        $PHPShopGUI->setInputText(false, 'endpoint_url_new', $data['endpoint_url'], VrcubeConstant::$DEFAULT_INPUT_SIZE)
     );
     $Tab1 .= '<input type="hidden" name="use_cashbox_new" value="0" />';
     $Tab1 .= $PHPShopGUI->setField(
@@ -73,7 +73,7 @@ function actionStart()
 
     // Статус заказа
     $Tab1 .= $PHPShopGUI->setField('Оплата при статусе',
-        $PHPShopGUI->setSelect('status_new', $order_status_value, 250));
+        $PHPShopGUI->setSelect('status_new', $order_status_value, VrcubeConstant::$DEFAULT_INPUT_SIZE));
 
     $Tab1 .= $PHPShopGUI->setField('Сообщение перед оплатой', $PHPShopGUI->setTextarea('title_new', $data['title']));
     $Tab1 .= $PHPShopGUI->setField('Сообщение предварительной проверки',
