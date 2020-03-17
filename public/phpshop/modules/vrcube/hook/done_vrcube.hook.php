@@ -43,6 +43,8 @@ function send_to_order_mod_vrcube_hook($obj, $value, $rout)
                 'cf' => $cf,
                 'cf2' => $cf2,
                 'cf3' => $cf3,
+                'email' => isset($_POST['mail']) ? $_POST['mail'] : '',
+                'phone' => isset($_POST['tel_new']) ? $_POST['tel_new'] : '',
 
                 'ok_url' => $domainUrl . '/success/',
                 'ko_url' => $domainUrl . '/fail/',
