@@ -26,7 +26,7 @@ function send_to_order_mod_vrcube_hook($obj, $value, $rout)
             $domainUrl = isset($_SERVER['REQUEST_SCHEME']) ? $_SERVER['REQUEST_SCHEME'] : 'http';
             $domainUrl .= '://' . trim($_SERVER['SERVER_NAME'], '/');
 
-            $tokenGenerator = new VrcubeTokenGenerator();
+            $tokenGenerator = new VrcubeTokenGenerator(); // TODO think about move to ServiceLocator
 
             $formParams = array(
                 'product_id' => (int)$options['product_id'],
