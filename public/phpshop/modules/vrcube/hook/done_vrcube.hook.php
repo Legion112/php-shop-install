@@ -1,5 +1,6 @@
 <?php
 require_once(__DIR__.'/../VrcubeConstant.php');
+require_once(__DIR__.'/../src/VrcubeTokenGenerator.php');
 /**
  * @param PHPShopCore $obj
  * @param $value
