@@ -7,6 +7,7 @@ services:
       dockerfile: .docker/apache/Dockerfile
     volumes:
     - ./public:/var/www/html/
+    - .docker/php/xdebug.int:/usr/local/etc/php/php.ini
     ports:
     - 80:80
     networks:

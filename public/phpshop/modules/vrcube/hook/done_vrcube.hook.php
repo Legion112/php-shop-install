@@ -1,5 +1,5 @@
 <?php
-require_once '../VrcubeConstant.php';
+require_once(__DIR__.'/../VrcubeConstant.php');
 /**
  * @param PHPShopCore $obj
  * @param $value
