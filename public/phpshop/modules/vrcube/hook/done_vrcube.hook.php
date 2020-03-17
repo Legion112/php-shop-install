@@ -22,27 +22,23 @@ function send_to_order_mod_vrcube_hook($obj, $value, $rout)
 
 
             $cf = $orderId;
-            $cf2 = '';
-            $cf3 = '';
 
             $domainUrl = isset($_SERVER['REQUEST_SCHEME']) ? $_SERVER['REQUEST_SCHEME'] : 'http';
             $domainUrl .= '://' . trim($_SERVER['SERVER_NAME'], '/');
 
+            $tokenGenerator = new VrcubeTokenGenerator();
+
             $formParams = array(
                 'product_id' => (int)$options['product_id'],
-                'token' => md5(
-                    (int)$options['contract_id']
-                    . (int)$options['product_id']
-                    . $amount
-                    . $cf
-                    . $cf2
-                    . $cf3
-                    . trim($options['vrcube_secret_word'])
+                'token' => $tokenGenerator->generate(
+                    $options['contract_id'],
+                    (int)$options['product_id'],
+                    $amount,
+                    $cf,
+                    trim($options['vrcube_secret_word'])
                 ),
                 'amount' => $amount,
                 'cf' => $cf,
-                'cf2' => $cf2,
-                'cf3' => $cf3,
                 'email' => isset($_POST['mail']) ? $_POST['mail'] : '',
                 'phone' => isset($_POST['tel_new']) ? $_POST['tel_new'] : '',
 
