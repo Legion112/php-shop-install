@@ -4,6 +4,7 @@
  * @param PHPShopCore $obj
  * @param PHPShopOrderFunction $PHPShopOrderFunction
  * @return string
+ * I DON'T know do we need this thing
  */
 function userorderpaymentlink_mod_vrcube_hook($obj, $PHPShopOrderFunction) {
 
