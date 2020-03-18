@@ -87,7 +87,7 @@ function send_to_order_mod_vrcube_hook($obj, $value, $rout)
 
             $hiddenFields = '';
             foreach ($formParams as $formParamName => $formParamValue) {
-                $hiddenFields .= "<input type='hidden' name='" . $formParamName . "' value='" . $formParamValue . "'/>";
+                $hiddenFields .= '<input type="hidden" name="' . $formParamName . '" value=\'' . $formParamValue . '\'/>';
             }
             $obj->set('hiddenFields', $hiddenFields);
 

@@ -1,11 +1,12 @@
 {
     "name": "vrcube/cms-phpshop",
     "require-dev": {
-        "phpunit/phpunit": "^7.5"
+        "phpunit/phpunit": "^7.5",
+        "codeception/codeception": "^4.1",
+        "codeception/module-phpbrowser": "^1.0.0",
+        "codeception/module-asserts": "^1.1"
     },
-    "require": {
-
-    },
+    "require": {},
     "autoload": {
         "classmap": [
             "src/"
