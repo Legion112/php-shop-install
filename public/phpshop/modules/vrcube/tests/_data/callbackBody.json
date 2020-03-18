@@ -1,0 +1,29 @@
+{
+  "transaction_code": "d72b4238e1404c3e8e61dc03669a92f8",
+  "status": "SUCCESS",
+  "amount": "100.40",
+  "fee": "0.40",
+  "currency": "RUB",
+  "product_id": "4359",
+  "payment_scheme": "Visa",
+  "datetime": "2020-03-12 16:45:31+0300",
+  "cf": "test",
+  "card_data": {
+    "pan_mask": "400000|0002",
+    "exp_month": "11",
+    "exp_year": "2020",
+    "cardholder": "cardholder"
+  },
+  "bank_data": {
+    "response_code": "0",
+    "response_code_desctiption": "Всё плохо",
+    "rrn": "004655413340",
+    "auth_code": "XX49EB"
+  },
+  "client_data": {
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "phone": ""
+  }
+}
